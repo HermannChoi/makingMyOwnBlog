@@ -1,0 +1,25 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar_space {
+  @include flexCenter();
+  flex-direction: column;
+  position: fixed;
+  left: 10%;
+  top: 38%;
+  box-sizing: border-box;
+  width: 15vw;
+  min-width: 180px;
+  height: 60%;
+  background-color: #0c1117;
+  border-radius: 50px;
+  box-shadow: 0 0 20px gray;
+  padding: {
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
