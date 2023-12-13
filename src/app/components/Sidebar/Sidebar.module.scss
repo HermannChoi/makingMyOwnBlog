@@ -3,23 +3,52 @@
   align-items: center;
 }
 
+@mixin flexCenterX2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sidebar_space {
   @include flexCenter();
   flex-direction: column;
-  position: fixed;
-  left: 10%;
-  top: 38%;
   box-sizing: border-box;
-  width: 15vw;
-  min-width: 180px;
-  height: 60%;
-  background-color: #0c1117;
-  border-radius: 50px;
-  box-shadow: 0 0 20px gray;
-  padding: {
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
+  width: 300px;
+  height: 100%;
+  background-color: #353535;
+  z-index: 10;
+}
+
+.profile_space {
+  @include flexCenterX2();
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  border: {
+    bottom: 1px solid white;
   }
+}
+
+.img {
+  border-radius: 30px;
+  width: 10vw;
+  max-width: 130px;
+  height: 10vw;
+  max-height: 130px;
+}
+
+.myName {
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+}
+
+.description {
+  @include flexCenterX2();
+  width: 200px;
+  text-align: center;
+  font: {
+  }
+  color: gray !important;
 }

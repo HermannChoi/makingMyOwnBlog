@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 
 const Header = () => {
-  const numbers = Array.from({ length: 39 }, (_, i) => i);
+  const numbers = Array.from({ length: 69 }, (_, i) => i);
 
   return (
     <div className={styles.header_space}>
