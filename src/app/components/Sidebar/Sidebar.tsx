@@ -1,23 +1,27 @@
 import React from "react";
 import styles from "./Sidebar.module.scss";
-import Image from "next/image";
-import img from "/public/images/IMG_1.jpg";
+import Profile from "./Profile/Profile";
 
 const Sidebar = () => {
   return (
     <div className={styles.sidebar_space}>
-      {" "}
-      <div className={styles.profile_space}>
-        {" "}
-        <div className={styles.image_container}>
-          <Image className={styles.img} src={img} alt="profile_pic" />
+      <Profile />
+      <div className={styles.sidebar_inner}>
+        <div className={styles.root}>ROOT(0)</div>
+        <div className={styles.programming}>
+          ...Programming
+          <div className={styles.in_programming}>Mark Up</div>
+          <div className={styles.in_programming}>Style Sheet</div>
+          <div className={styles.in_programming}>Language</div>
+          <div className={styles.in_programming}>Library</div>
         </div>
-        <div className={styles.myName}>Hermann Choi</div>
-        <div className={styles.description}>
-          A sprout with lots of photosynthesis
+        <div className={styles.framework}>
+          ...Framework
+          <div className={styles.in_framework}>Node.js</div>
+          <div className={styles.in_framework}>Next.js</div>
+          <div className={styles.in_framework}>Spring</div>
         </div>
       </div>
-      sidebar
     </div>
   );
 };

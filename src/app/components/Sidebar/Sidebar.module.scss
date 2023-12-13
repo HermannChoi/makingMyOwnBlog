@@ -3,52 +3,54 @@
   align-items: center;
 }
 
-@mixin flexCenterX2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .sidebar_space {
   @include flexCenter();
   flex-direction: column;
-  box-sizing: border-box;
   width: 300px;
   height: 100%;
-  background-color: #353535;
+  background-color: #343434;
   z-index: 10;
 }
 
-.profile_space {
-  @include flexCenterX2();
+.sidebar_inner {
+  display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 300px;
-  border: {
-    bottom: 1px solid white;
-  }
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 20px;
 }
 
-.img {
-  border-radius: 30px;
-  width: 10vw;
-  max-width: 130px;
-  height: 10vw;
-  max-height: 130px;
-}
-
-.myName {
+.root {
   font: {
     size: 20px;
-    weight: bold;
   }
 }
 
-.description {
-  @include flexCenterX2();
-  width: 200px;
-  text-align: center;
-  font: {
+.programming {
+  margin: {
+    top: 20px;
   }
-  color: gray !important;
+}
+
+.in_programming {
+  @include flexCenter();
+  height: 30px;
+  margin-left: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.framework {
+  gap: 10px;
+  margin: {
+    top: 20px;
+  }
+}
+
+.in_framework {
+  @include flexCenter();
+  height: 30px;
+  margin-left: 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
