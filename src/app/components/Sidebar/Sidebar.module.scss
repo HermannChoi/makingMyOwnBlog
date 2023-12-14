@@ -3,54 +3,128 @@
   align-items: center;
 }
 
+@mixin flexCenterX2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sidebar_space {
   @include flexCenter();
   flex-direction: column;
   width: 300px;
   height: 100%;
   background-color: #343434;
+  box-shadow: 3px 0px 10px #080808;
   z-index: 10;
 }
 
 .sidebar_inner {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 80%;
-  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  margin: {
+    top: 20px;
+  }
+  overflow: scroll;
 }
 
 .root {
-  font: {
-    size: 20px;
-  }
+  font-size: 20px;
 }
 
-.programming {
+.st_menu {
+  display: flex;
+  flex-direction: column;
   margin: {
     top: 20px;
   }
 }
 
-.in_programming {
+.st_name {
   @include flexCenter();
-  height: 30px;
-  margin-left: 20px;
-  font-size: 18px;
+  height: 40px;
+  color: gray;
+}
+
+.icons {
+  @include flexCenterX2();
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: {
+    left: 10px;
+    right: 10px;
+  }
+  background-color: #494949;
+}
+
+.icons2 {
+  @include flexCenterX2();
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  background-color: #494949;
+}
+
+.nd_menu {
+  height: auto;
+  margin: {
+    // left: 20px;
+  }
+  font-size: 20px;
   cursor: pointer;
 }
 
-.framework {
-  gap: 10px;
-  margin: {
-    top: 20px;
+.nd_name_space {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 10px;
+  // transition: 0.3s;
+}
+
+.nd_name_space:hover {
+  background-color: gray;
+}
+
+.nd_menu_space:hover span {
+  color: orange;
+  animation: vibration 0.1s infinite linear;
+}
+
+@keyframes vibration {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
   }
 }
 
-.in_framework {
-  @include flexCenter();
+.rd_menu {
   height: 30px;
-  margin-left: 20px;
   font-size: 18px;
-  cursor: pointer;
+}
+
+.rd_name_space {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.rd_name_space:hover {
+  background-color: gray;
 }

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.body}>
-        <Header />a
+        <Header />
       </div>
     </>
   );
