@@ -29,7 +29,6 @@ const Profile = () => {
           >
             house
           </Link>
-          <span>홈</span>
         </div>
         <div className={styles.btnEach_space}>
           <div
@@ -37,16 +36,14 @@ const Profile = () => {
           >
             search
           </div>
-          <span>검색</span>
         </div>
         <div className={styles.btnEach_space}>
           <Link
-            href="/"
+            href="/category/Guestbook"
             className={`${styles.guestbook} ${styles.icons} material-symbols-outlined`}
           >
             book
           </Link>
-          <span>방명록</span>
         </div>
       </div>
     </div>

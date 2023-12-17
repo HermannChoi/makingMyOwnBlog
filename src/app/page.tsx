@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <div className={styles.body}>
         <Header />
+        메인페이지
       </div>
     </>
   );

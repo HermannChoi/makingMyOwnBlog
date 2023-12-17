@@ -15,6 +15,8 @@ import library from "/public/images/library.svg";
 import nodejs from "/public/images/nodejs.svg";
 import nextjs from "/public/images/nextjs.svg";
 import spring from "/public/images/language.svg";
+import { FaAngleRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Sidebar = () => {
   return (
@@ -25,92 +27,91 @@ const Sidebar = () => {
         <div className={styles.st_menu}>
           <div className={styles.st_name}> ...Programming</div>
           <div className={styles.nd_menu}>
-            <div className={styles.nd_name_space}>
-              <Image src={markup} alt="mu" className={styles.icons} />
+            <Link href="/category/MarkUp" className={styles.nd_name_space}>
+              <Image src={markup} alt="" className={styles.icons} />
               <span>Mark Up</span>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={html} alt="html" className={styles.icons2} />
-                <span>HTML</span>
-              </div>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={markdown} alt="html" className={styles.icons2} />
-                <span>MarkDown</span>
-              </div>
-            </div>
+            </Link>
+            <Link href="/category/MarkUp/HTML" className={styles.rd_name_space}>
+              <FaAngleRight />
+              <Image src={html} alt="" className={styles.icons2} />
+              <span>HTML</span>
+            </Link>
+            <Link
+              href="/category/MarkUp/MarkDown"
+              className={styles.rd_name_space}
+            >
+              <FaAngleRight />
+              <Image src={markdown} alt="" className={styles.icons2} />
+              <span>MarkDown</span>
+            </Link>
           </div>
           <div className={styles.nd_menu}>
-            <div className={styles.nd_name_space}>
-              <Image src={palette} alt="mu" className={styles.icons} />
+            <Link href="/category/StyleSheet" className={styles.nd_name_space}>
+              <Image src={palette} alt="" className={styles.icons} />
               <span>Style Sheet</span>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={css} alt="html" className={styles.icons2} />
-                <span>CSS</span>
-              </div>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={sass} alt="html" className={styles.icons2} />
-                <span>SCSS</span>
-              </div>
-            </div>
+            </Link>
+            <Link
+              href="/category/StyleSheet/CSS"
+              className={styles.rd_name_space}
+            >
+              <FaAngleRight />
+              <Image src={css} alt="" className={styles.icons2} />
+              <span>CSS</span>
+            </Link>
+            <Link
+              href="/category/StyleSheet/SCSS"
+              className={styles.rd_name_space}
+            >
+              <FaAngleRight />
+              <Image src={sass} alt="" className={styles.icons2} />
+              <span>SCSS</span>
+            </Link>
           </div>
           <div className={styles.nd_menu}>
-            {" "}
-            <div className={styles.nd_name_space}>
-              <Image src={language} alt="mu" className={styles.icons} />
+            <Link href="/category/Language" className={styles.nd_name_space}>
+              <Image src={language} alt="" className={styles.icons} />
               <span>Language</span>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={js} alt="html" className={styles.icons2} />
-                <span>JavaScript</span>
-              </div>
-            </div>
-            <div className={styles.rd_menu}>
-              <div className={styles.rd_name_space}>
-                <span> {`>`} </span>
-                <Image src={ts} alt="html" className={styles.icons2} />
-                <span>TypeScript</span>
-              </div>
-            </div>
+            </Link>
+            <Link
+              href="/category/Language/JavaScript"
+              className={styles.rd_name_space}
+            >
+              <FaAngleRight />
+              <Image src={js} alt="" className={styles.icons2} />
+              <span>JavaScript</span>
+            </Link>
+            <Link
+              href="/category/Language/TypeScript"
+              className={styles.rd_name_space}
+            >
+              <FaAngleRight />
+              <Image src={ts} alt="" className={styles.icons2} />
+              <span>TypeScript</span>
+            </Link>
           </div>
           <div className={styles.nd_menu}>
             {" "}
-            <div className={styles.nd_menu}>
-              {" "}
-              <div className={styles.nd_name_space}>
-                <Image src={library} alt="mu" className={styles.icons} />
-                <span>Library</span>
-              </div>
-            </div>
+            <Link href="/category/Library" className={styles.nd_name_space}>
+              <Image src={library} alt="" className={styles.icons} />
+              <span>Library</span>
+            </Link>
           </div>
         </div>
         <div className={styles.st_menu}>
           <div className={styles.st_name}> ...Framework</div>
           <div className={styles.nd_menu}>
-            <div className={styles.nd_name_space}>
-              <Image src={nodejs} alt="mu" className={styles.icons} />
+            <Link href="/category/Nodejs" className={styles.nd_name_space}>
+              <Image src={nodejs} alt="" className={styles.icons} />
               <span>Node.js</span>
-            </div>
-            <div className={styles.nd_name_space}>
-              <Image src={nextjs} alt="mu" className={styles.icons} />
+            </Link>
+            <Link href="/category/Nextjs" className={styles.nd_name_space}>
+              <Image src={nextjs} alt="" className={styles.icons} />
               <span>Next.js</span>
-            </div>
-            <div className={styles.nd_name_space}>
-              <Image src={spring} alt="mu" className={styles.icons} />
+            </Link>
+            <Link href="/category/Spring" className={styles.nd_name_space}>
+              <Image src={spring} alt="" className={styles.icons} />
               <span>Spring</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

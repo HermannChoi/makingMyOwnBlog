@@ -64,23 +64,37 @@
 
 .icons {
   @include flexCenterX2();
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   font: {
     size: 25px;
   }
+  color: white;
   cursor: pointer;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.icons::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
   transition: 0.3s;
 }
 
 .icons:hover {
   color: orange;
-  background-color: #4d4d49;
 }
 
-.btnEach_space span {
-  font-size: 12px;
-  transform: translateY(20px);
-  display: none;
+.icons:hover::after {
+  background-color: #4d4d49;
+  transform: translate(-50%, -50%) scale(1);
 }
