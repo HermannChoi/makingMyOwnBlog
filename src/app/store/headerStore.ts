@@ -6,7 +6,7 @@ interface HeaderTextStoreState {
 }
 
 const HeaderTextStore = create<HeaderTextStoreState>((set) => ({
-  headerText: `Welcome to Hermann's Blog`,
+  headerText: `Hermann's Blog`,
   setHeaderText: (newHeaderText: string) => set({ headerText: newHeaderText }),
 }));
 

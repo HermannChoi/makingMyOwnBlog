@@ -8,7 +8,7 @@ const Header = () => {
   const { headerText, setHeaderText } = useStore();
 
   useEffect(() => {
-    setHeaderText("Welcome to Hermann's Blog");
+    setHeaderText("Hermann's Blog");
   }, []);
 
   return (
